@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Filter = () => {
@@ -43,7 +44,6 @@ const Filter = () => {
           className="text-xs rounded-2xl pl-2 w-24 ring-1 ring-gray-400"
           onChange={handleFilterChange}
         />
-
         <select
           name="cat"
           className="py-2 px-4 rounded-2xl text-xs font-medium bg-[#EBEDED]"
@@ -79,4 +79,11 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+// Wrap Filter component with Suspense
+const SuspendedFilter = () => (
+  <Suspense fallback={<div>Loading filters...</div>}>
+    <Filter />
+  </Suspense>
+);
+
+export default SuspendedFilter;
