@@ -5,6 +5,7 @@ import { fetchSelectedProductById } from "@/services/fetchSelectedProductById";
 import { Product } from "@/types/product";
 import Add from "@/components/Add";
 import { logFetchDataError } from "@/error/fetchError";
+
 const SinglePage: React.FC = () => {
   const { id } = useParams();
 
@@ -23,6 +24,9 @@ const SinglePage: React.FC = () => {
       fetchProduct();
     }
   }, [id]);
+  if (!selectedProduct) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative flex flex-col lg:flex-row gap-16">
