@@ -33,6 +33,7 @@ export const StoreProvider: React.FC<{ children: ReactNode }> = ({
         products,
         selectedProduct,
         setSelectedProduct,
+        setCartItem,
         cartItem,
         addToCart: handleAddToCart,
         removeFromCart: handleRemoveOneFromCart,
