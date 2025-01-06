@@ -15,7 +15,7 @@ const Add: React.FC<AddProps> = ({ selectedProduct }) => {
 
   const handleAddToCart = () => {
     const productWithQuantity = { ...selectedProduct, quantity };
-    addToCart(productWithQuantity, setCartItem);
+    addToCart(productWithQuantity);
 
     toast.success("Added to Cart!");
   };
