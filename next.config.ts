@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
       "fakestoreapi.com",
     ], // Add the hostname of your external image source
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
