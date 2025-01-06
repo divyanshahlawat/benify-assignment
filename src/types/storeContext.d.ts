@@ -7,6 +7,7 @@ export interface StoreContextType {
   selectedProduct: Product | undefined;
   setSelectedProduct: React.Dispatch<React.SetStateAction<Product | undefined>>;
   cartItem: CartItem[];
+  setCartItem: React.Dispatch<React.SetStateAction<Product[]>>;
   addToCart: (item: CartItem) => void;
   removeFromCart: (itemId: string) => void;
   clearCart: () => void;
