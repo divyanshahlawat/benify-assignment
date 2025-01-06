@@ -14,7 +14,11 @@ const Add: React.FC<AddProps> = ({ selectedProduct }) => {
   const { setCartItem, addToCart } = useStore();
 
   const handleAddToCart = () => {
-    const productWithQuantity = { ...selectedProduct, quantity };
+    const productWithQuantity = {
+      ...selectedProduct,
+      quantity,
+      id: String(selectedProduct.id),
+    };
     addToCart(productWithQuantity);
 
     toast.success("Added to Cart!");
