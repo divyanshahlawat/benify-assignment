@@ -11,7 +11,7 @@ interface AddProps {
 
 const Add: React.FC<AddProps> = ({ selectedProduct }) => {
   const [quantity, setQuantity] = useState(1);
-  const { setCartItem, cartItem, addToCart } = useStore();
+  const { setCartItem, addToCart } = useStore();
 
   const handleAddToCart = () => {
     const productWithQuantity = { ...selectedProduct, quantity };
