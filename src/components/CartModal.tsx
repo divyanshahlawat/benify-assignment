@@ -4,7 +4,7 @@ import { useStore } from "@/context/StoreContext";
 import Image from "next/image";
 
 const CartModal = () => {
-  const { cartItem, removeFromCart, totalAmount } = useStore();
+  const { cartItem, removeFromCart } = useStore();
 
   const handleRemoveFromCart = (productId: string) => {
     removeFromCart(productId);
