@@ -1,0 +1,2 @@
+export const productListImage =
+  " https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=800";
